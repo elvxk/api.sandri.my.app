@@ -1,10 +1,3 @@
-import prisma from "@/libs/prisma";
-
 export async function GET(request) {
-  const getProjects = await prisma.projects.findMany();
-  if (!getProjects) {
-    return Response.json({ status: 500, message: "error" });
-  } else {
-    return Response.json({ status: 200, message: "ok", data: getProjects });
-  }
+  return Response.json({ status: 200, message: "ok" });
 }
