@@ -1,6 +1,6 @@
 import prisma from "@/libs/prisma";
 
-export async function POST(request) {
+export async function GET(request) {
   const getProjects = await prisma.projects.findMany();
   if (!getProjects) {
     return Response.json({ status: 500, message: "error" });
