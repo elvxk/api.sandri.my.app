@@ -8,4 +8,8 @@ router.get("/", async (req, res) => {
   res.status(200).send({ message: "success", data: projects });
 });
 
+router.get("/test", (req, res) => {
+  res.status(200).send({ message: "success from project test" });
+});
+
 module.exports = router;
