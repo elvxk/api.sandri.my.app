@@ -1,4 +1,4 @@
-import prisma from "../libs/prisma";
+const prisma = require("../libs/prisma");
 
 const findProjects = async () => {
   const projects = await prisma.projects.findMany();
