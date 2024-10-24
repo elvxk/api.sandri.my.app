@@ -9,6 +9,10 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.json({ status: "OK from slash" });
+});
+
 app.get("/v1", (req, res) => {
   res.json({ status: "success" });
 });
