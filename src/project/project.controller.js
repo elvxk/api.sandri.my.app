@@ -1,5 +1,4 @@
 const express = require("express");
-const prisma = require("../libs/prisma");
 const { getAllProjects } = require("./project.service");
 
 const router = express.Router();
